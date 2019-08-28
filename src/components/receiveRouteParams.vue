@@ -1,5 +1,6 @@
 <template>
     <section class="router-container">
+        <Back/>
         <div class="cmp-container">
             <component :is="'DAY'+$route.params.id"/>
         </div>
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+    import Back from './backToBefore'
     import DAY1 from './day1'
     import DAY2 from './day2'
     import DAY3 from './day3'
@@ -20,6 +22,7 @@
     export default {
         name: "receiveRouteParams",
         components: {
+            Back,
             DAY1,
             DAY2,
             DAY3,
