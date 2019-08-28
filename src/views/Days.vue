@@ -1,21 +1,35 @@
 <template>
     <section class="container">
-        <span>目前进度： day 6</span>
-        <ul>
-            <li v-for="(item, index) in 100" class="item">
-                <router-link :to="'/days/'+item" class="url-link">
-                    <span :class="'day'+item">{{item}}</span>
-                </router-link>
-            </li>
-        </ul>
+                <span>目前进度： day {{nowDay-1}}</span>
+                <ul>
+                    <li v-for="(item, index) in 100" class="item" v-show="index < nowDay">
+                        <router-link :to="'/days/'+item" class="url-link">
+                            <span :class="'day'+item">{{item}}</span>
+                        </router-link>
+                    </li>
+                </ul>
     </section>
 </template>
 
 <script>
     export default {
-        name: "100days",
         data() {
-            return {}
+            return {
+                nowDay: 7
+            }
+        },
+        methods:{
+            transitionPending(el){
+                console.log(el)
+            },
+            transitionComplete(e){
+                console.log(e)
+            }
+        },
+        mounted(){
+            if(window){
+                window.onscroll = null;
+            }
         }
     }
 </script>
@@ -31,21 +45,22 @@
         height: 100%;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        align-content: space-between;
         flex-wrap: wrap;
     }
 
     li {
-        flex: 1;
+        /*flex: 1;*/
         flex-basis: 20%;
         list-style: none;
         height: 100px;
         line-height: 100px;
         text-align: center;
-        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        box-shadow: rgba(0,0,0,0.2) 5px 5px;
         margin: 20px 20px;
+        width: 20%;
     }
     .url-link{
         display: inline-block;

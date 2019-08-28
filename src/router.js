@@ -14,16 +14,19 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      meta:{index:0},
       component: About
     },
     {
       path: '/days',
       name: 'Days',
+      meta:{index:1},
       component: Days
     },
     {
       path: '/days/:id',
       name: '',
+      meta:{index:2},
       component: receiveRouteParams,
     },
   ]
