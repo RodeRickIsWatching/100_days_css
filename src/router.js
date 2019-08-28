@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Days from './views/Days'
+import About from './views/About'
 import receiveRouteParams from './components/receiveRouteParams'
 
 Vue.use(Router)
@@ -13,7 +14,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Days
+      component: About
     },
     {
       path: '/days',
@@ -24,6 +25,6 @@ export default new Router({
       path: '/days/:id',
       name: '',
       component: receiveRouteParams,
-    }
+    },
   ]
 })

@@ -13,4 +13,13 @@
     padding: 0;
     margin: 0;
   }
+  body{
+    height: 100vh;
+  }
+  a{
+    color: #a4a4a4;
+    outline: none;
+    text-decoration: none;
+  }
+
 </style>
