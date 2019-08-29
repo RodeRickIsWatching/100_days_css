@@ -62,6 +62,8 @@
   *{
     padding: 0;
     margin: 0;
+    font-family: Arial;
+
   }
   body{
     height: 100vh;
@@ -94,7 +96,7 @@
 
   @keyframes openTheDoor {
     0%{
-      
+
     }
     20%{
 
