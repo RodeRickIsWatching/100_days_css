@@ -17,6 +17,11 @@
     import DAY6 from './day6'
     import DAY7 from './day7'
     import DAY8 from './day8'
+    import DAY9 from './day9'
+    import DAY10 from './day10'
+    import DAY11 from './day11'
+    import DAY12 from './day12'
+    import DAY13 from './day13'
 
 
     export default {
@@ -31,6 +36,12 @@
             DAY6,
             DAY7,
             DAY8,
+            DAY9,
+            DAY10,
+            DAY11,
+            DAY12,
+            DAY13
+
         }
     }
 </script>

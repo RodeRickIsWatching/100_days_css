@@ -33,7 +33,7 @@
     export default {
         data() {
             return {
-                nowDay: 8,
+                nowDay: 10,
                 totalDays: 20,
                 ifShowShelter: false,
                 showMsg: []
@@ -218,15 +218,39 @@
     }
 
     .back-icon:hover span:nth-of-type(1), .back-icon:hover span:nth-of-type(3){
-        transform: rotateZ(10deg);
+        /*transform: rotateZ(10deg);*/
+        animation: letterTranslateEven 1s forwards cubic-bezier(0.42, 0, 0.95, 0.46);
         color: #000;
     }
 
     .back-icon:hover span:nth-of-type(2), .back-icon:hover span:nth-of-type(4){
-        transform: rotateZ(-10deg);
+        /*transform: rotateZ(-10deg);*/
+        animation: letterTranslateOdd 1s forwards cubic-bezier(0.42, 0, 0.95, 0.46);
         color: #000;
     }
 
+    @keyframes letterTranslateEven {
+        0%{
+            transform: translateX(0px)
+        }
+        50%{
+            transform: translateX(-15px)
+        }
+        100%{
+            transform: translateX(0px)
+        }
+    }
 
+    @keyframes letterTranslateOdd {
+        0%{
+            transform: translateX(0px)
+        }
+        50%{
+            transform: translateX(10px)
+        }
+        100%{
+            transform: translateX(0px)
+        }
+    }
 
 </style>
